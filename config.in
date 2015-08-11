@@ -1,0 +1,70 @@
+[
+ %% This site is enabled or not.
+ {enabled, true},
+
+ %% Hostname on which this site runs
+ {hostname, "fromtheglen.zotonic.com"},
+
+ %% Aliases which should redirect to the primary hostname
+ {hostalias, [
+	"fromtheglen.zotonic.com",
+	"fromtheglen.local:8000"
+  ]},
+
+ %% PostgreSQL database connection
+ {dbhost, "127.0.0.1"},
+ {dbport, 5432},
+ {dbuser, "zotonic"},
+ {dbpassword, ""},
+ {dbdatabase, "lloyd"},
+ {dbschema, "public"},
+
+ %% Depcache settings, maximum size in mbs
+ {depcache_memory_max, 100},
+
+ %% Password for the 'admin' user.
+ {admin_password, "admin"},
+
+ %% Specific options
+
+ %% Title of your site
+ {title, <<"From the Glen">>},
+
+ %% Subtitle
+ {subtitle, <<"">>},
+
+ %% Page length
+ {pagelen, 10},
+
+{install_modules,
+ [
+  mod_base,
+  mod_menu,
+  mod_oauth,
+  mod_search,
+  mod_translation,
+  mod_signal,
+  mod_logging,
+  mod_mqtt,
+
+  mod_authentication,
+  mod_acl_adminonly,
+
+  mod_editor_tinymce,
+
+  mod_admin,
+  mod_admin_category,
+  mod_admin_config,
+  mod_admin_identity,
+  mod_admin_modules,
+  mod_admin_predicate,
+
+  mod_l10n,
+
+  mod_artwork,
+  mod_bootstrap,
+  mod_base_site
+ ]
+}
+
+].
